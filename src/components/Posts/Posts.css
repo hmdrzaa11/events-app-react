@@ -1,0 +1,7 @@
+.Posts {
+  margin-top: 8rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(40rem, min-content));
+  justify-content: center;
+  gap: 2rem;
+}

@@ -1,0 +1,37 @@
+.Signup {
+}
+.Signup-container {
+  width: 40%;
+}
+
+.Signup-form {
+  border-radius: 4px;
+  width: 100%;
+  padding: 2rem 8rem;
+  background-color: white;
+}
+
+.already-btn {
+  margin-left: 2rem;
+  text-decoration: none;
+  font-size: 1.4rem;
+  cursor: pointer;
+  color: var(--color-dark-violet);
+}
+
+.google-btn {
+  background-color: #4c8bf5;
+  display: flex;
+  width: 100%;
+  color: white;
+  padding: 0.4rem 2rem;
+  font-weight: 600;
+  font-family: "Akaya Telivigala", sans-serif;
+  justify-content: center;
+  align-items: center;
+}
+
+.google-icon {
+  width: 3rem;
+  margin-right: 0.4rem;
+}

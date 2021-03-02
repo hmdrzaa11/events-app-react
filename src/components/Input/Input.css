@@ -1,0 +1,47 @@
+.Input {
+  width: 100%;
+  margin: 2rem 0;
+}
+
+.Input-text {
+  width: 100%;
+  display: block;
+  border: none;
+  background: none;
+  padding: 1rem 2rem;
+  border-radius: 5px;
+  border: 1px solid rgb(221, 217, 217);
+  transition: all 0.3s;
+  font-family: inherit;
+  font-size: 1.4rem;
+}
+
+.Input-text::-webkit-input-placeholder {
+  font-family: inherit;
+  font-size: 1.4rem;
+}
+.Input-text::placeholder {
+  font-family: inherit;
+  font-size: 1.4rem;
+}
+
+.Input-text:focus {
+  outline: none;
+  border: 1px solid #51b972;
+  background-color: white;
+}
+
+.Input-file {
+  border: none;
+  background: none;
+  display: none;
+}
+
+.Input-label {
+  font-size: 1.4rem;
+  padding: 1rem 1rem;
+  background-color: rgb(255, 162, 118);
+  color: white;
+  cursor: pointer;
+  border-radius: 8px;
+}

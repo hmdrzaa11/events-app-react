@@ -1,0 +1,21 @@
+.Form {
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.Form-header {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+
+.Form-form {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 1rem;
+  width: 40%;
+  height: 60%;
+  box-shadow: var(--light-shadow);
+}
