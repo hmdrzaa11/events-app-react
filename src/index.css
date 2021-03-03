@@ -40,7 +40,8 @@ h3,
 h4,
 h5,
 h6,
-a {
+a,
+button {
   font-family: "Akaya Telivigala", sans-serif;
 }
 

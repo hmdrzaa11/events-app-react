@@ -15,14 +15,14 @@ export default function UserProvider(props) {
       image: "",
     },
     () => {
-      let profile = JSON.parse(localStorage.getItem("profile"));
-      if (profile) {
+      let userData = JSON.parse(localStorage.getItem("profile"));
+      if (userData) {
         return {
-          userId: profile.googleId,
-          username: profile.name,
-          token: profile.token,
+          userId: userData.profile.googleId,
+          username: userData.profile.name,
+          token: userData.profile.token,
           loading: false,
-          image: profile.imageUrl,
+          image: userData.profile.imageUrl,
         };
       } else {
         return {

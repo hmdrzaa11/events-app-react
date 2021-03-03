@@ -2,11 +2,12 @@ import React, { useContext } from "react";
 import cameraImage from "../../images/camera.png";
 import "./Nav.css";
 import { Link } from "react-router-dom";
-import { UserContext } from "../../context/UserContext";
+import { UserContext, UserDispatch } from "../../context/UserContext";
+import { logoutAction } from "../../actions/authActions";
 
 let Nav = () => {
   let { userId, image, username } = useContext(UserContext);
-
+  let dispatch = useContext(UserDispatch);
   //********** render NavLinks ************ */
   let renderNavLinks = () => {
     if (userId) {
@@ -28,6 +29,11 @@ let Nav = () => {
     }
   };
 
+  //********************* handle logout ************************* */
+  let handleLogout = () => {
+    logoutAction(dispatch);
+  };
+
   //****************** render profile  ********************** */
   let renderProfile = () => {
     if (userId) {
@@ -35,6 +41,9 @@ let Nav = () => {
         <div className="Nav-profile">
           <h2 className="Nav-profile__username">{username}</h2>
           <img className="Nav-profile__image" src={image} alt="profile" />
+          <button className="Nav-profile__logout" onClick={handleLogout}>
+            Logout
+          </button>
         </div>
       );
     }
