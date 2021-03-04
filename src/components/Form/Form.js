@@ -12,7 +12,6 @@ function Form(props) {
   let [formState, setFormState] = useState({
     title: "",
     content: "",
-    author: "",
     tags: "",
   });
   let [image, setImage] = useState(null);
@@ -25,7 +24,6 @@ function Form(props) {
         title: post.title,
         content: post.content,
         tags: post.tags.join(","),
-        author: post.author,
       });
     }
   }, [post]);
@@ -37,7 +35,7 @@ function Form(props) {
     formData.append("title", formState.title);
     formData.append("tags", formState.tags);
     formData.append("content", formState.content);
-    formData.append("author", formState.author);
+
     //call the actionCreator
     if (onFormSubmit) {
       onFormSubmit(formData, setFormState);
@@ -47,7 +45,6 @@ function Form(props) {
         tags: "",
         title: "",
         content: "",
-        author: "",
       });
     }
   };
@@ -93,14 +90,6 @@ function Form(props) {
           value={formState.title}
           onChange={handleInputChange}
           placeholder="Title"
-        />
-        <Input
-          type="author"
-          label="author"
-          name="author"
-          value={formState.author}
-          onChange={handleInputChange}
-          placeholder="Author"
         />
         <Input
           type="text"
